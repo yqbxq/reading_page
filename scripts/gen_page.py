@@ -559,10 +559,10 @@ def generate_html(reading_data, output_file="index.html"):
             var y = d.getFullYear();
             var m = d.getMonth() + 1;
             var n = d.getDate();
-            m = m > 9 ? m : "0" + m;
-            n = n > 9 ? n : "0" + n;
+            var mm = m > 9 ? m : "0" + m;
+            var dd = n > 9 ? n : "0" + n;
             
-            // 备用图片源
+            // 备用图片源 - 尝试多种可能的 URL 格式
             var imgSources = [
                 "https://img.owspace.com/Public/uploads/Download/" + y + "/" + m + n + ".jpg",
                 "https://img.owspace.com/Public/uploads/Download/" + y + "-" + m + "-" + n + ".jpg"
@@ -585,11 +585,12 @@ def generate_html(reading_data, output_file="index.html"):
                 var img = new Image();
                 img.onload = function() {{
                     document.getElementById("dailyCalendarContent").innerHTML = 
-                        '<img class="daily-calendar-image" src="' + imgSources[index] + '" alt="单向历" />';
+                        '<img class="daily-calendar-image" src="' + imgSources[index] + '" alt="单向历" referrerpolicy="no-referrer" />';
                 }};
                 img.onerror = function() {{
                     tryLoadImage(index + 1);
                 }};
+                img.referrerPolicy = 'no-referrer';
                 img.src = imgSources[index];
             }}
         }}
