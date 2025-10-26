@@ -130,7 +130,23 @@ def generate_html(reading_data, output_file="index.html"):
     """Generate HTML page with stats, daily calendar, and heatmap"""
     
     reading_days = reading_data.get("reading_days", {})
-    last_updated = reading_data.get("last_updated", "")
+    last_updated_raw = reading_data.get("last_updated", "")
+    
+    # 格式化 last_updated，只显示日期
+    if last_updated_raw:
+        try:
+            # 尝试解析时间戳，只保留日期部分
+            if 'T' in last_updated_raw or ' ' in last_updated_raw:
+                # ISO 格式或带时间的格式
+                dt = datetime.fromisoformat(last_updated_raw.replace('Z', '+00:00'))
+                last_updated = dt.strftime('%Y-%m-%d')
+            else:
+                # 已经是日期格式
+                last_updated = last_updated_raw.split()[0] if ' ' in last_updated_raw else last_updated_raw
+        except:
+            last_updated = last_updated_raw.split()[0] if last_updated_raw and ' ' in last_updated_raw else last_updated_raw
+    else:
+        last_updated = ""
     
     stats = calculate_stats(reading_days)
     weeks = generate_heatmap_data(reading_days, months=12)
