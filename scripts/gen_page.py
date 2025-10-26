@@ -583,7 +583,6 @@ def generate_html(reading_data, output_file="index.html"):
                 }}
                 
                 var img = new Image();
-                img.crossOrigin = "anonymous";
                 img.onload = function() {{
                     document.getElementById("dailyCalendarContent").innerHTML = 
                         '<img class="daily-calendar-image" src="' + imgSources[index] + '" alt="单向历" />';
