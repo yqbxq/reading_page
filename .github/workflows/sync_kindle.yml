@@ -1,0 +1,83 @@
+name: Sync Kindle Data and Deploy
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'  # Run daily at midnight UTC
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/**'
+      - '.github/workflows/sync_kindle.yml'
+
+env:
+  BUILD_GH_PAGES: true
+
+jobs:
+  sync_and_deploy:
+    name: Sync Data and Deploy Static Page
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: 'requirements.txt'
+
+      - name: Install Python dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Create data directory
+        run: |
+          mkdir -p data
+
+      - name: Sync Kindle data
+        env:
+          KINDLE_COOKIE: ${{ secrets.KINDLE_COOKIE }}
+        run: |
+          python scripts/kindle_sync.py
+
+      - name: Generate Static HTML Page
+        run: |
+          python scripts/gen_page.py
+          echo "✓ Static page generated"
+          ls -la index.html
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email 'action@github.com'
+          git config --local user.name 'GitHub Action'
+          git add data/ index.html
+          git commit -m 'Update reading data and page [skip ci]' || echo 'No changes to commit'
+          git push || echo 'Nothing to push'
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Output deployment URL
+        run: |
+          echo "🎉 Deployment complete!"
+          echo "📚 Visit your reading page at: ${{ steps.deployment.outputs.page_url }}"

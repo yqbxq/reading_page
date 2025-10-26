@@ -1,0 +1,101 @@
+{
+  "days_read": [
+    "2024-06-02",
+    "2024-06-03",
+    "2024-06-04",
+    "2025-10-21",
+    "2025-10-23",
+    "2025-10-24",
+    "2025-10-25"
+  ],
+  "current_daily_streak": {
+    "duration": 3,
+    "readingMarketplace": 1,
+    "utcEndTime": "2025-10-25T07:00:00.000Z",
+    "start": "2025-10-23T00:00:00.000Z",
+    "end": "2025-10-25T00:00:00.000Z",
+    "ttl": 1761483814
+  },
+  "longest_daily_streak": {
+    "duration": 3,
+    "readingMarketplace": 1,
+    "utcEndTime": "2025-10-25T07:00:00.000Z",
+    "start": "2025-10-23T00:00:00.000Z",
+    "end": "2025-10-25T00:00:00.000Z"
+  },
+  "current_weekly_streak": {
+    "duration": 1,
+    "readingMarketplace": 1,
+    "utcEndTime": "2025-10-25T07:00:00.000Z",
+    "start": "2025-10-21T00:00:00.000Z",
+    "end": "2025-10-25T00:00:00.000Z",
+    "ttl": 1761483814
+  },
+  "longest_weekly_streak": {
+    "duration": 1,
+    "readingMarketplace": 1,
+    "utcEndTime": "2025-10-25T07:00:00.000Z",
+    "start": "2025-10-21T00:00:00.000Z",
+    "end": "2025-10-25T00:00:00.000Z"
+  },
+  "current_weekly_streak_state": "record_streak_broken",
+  "goal_info": {
+    "goals": {},
+    "titles_read": [
+      {
+        "asin": "89B965055B1648CEA71827F9B02EF1D4",
+        "read_event_id": "3b37f66c-fa1b-484e-92b8-ab7a6fd5ee0f",
+        "date_read": "2024-06-04T15:51:42Z",
+        "content_type": "PDOC",
+        "source_origin": "KINDLE",
+        "book_uri": "UNKNOWN"
+      },
+      {
+        "asin": "F8FDD787C38F44A0A051C299191E8765",
+        "read_event_id": "904b4121-5a45-46d0-8e1b-f6dd7c820ed0",
+        "date_read": "2024-06-04T07:05:45Z",
+        "content_type": "PDOC",
+        "source_origin": "KINDLE",
+        "book_uri": "UNKNOWN"
+      }
+    ],
+    "is_backfill_completed": true
+  },
+  "preferences": null,
+  "urcGatingWeblabTreatment": "T1",
+  "achievements_data": {
+    "daysLeftInCurrentChallenge": 66,
+    "totalAvailableAchievements": 15,
+    "totalEarnedAchievements": 1,
+    "achievementsDisplayAttributes": [
+      {
+        "imageUrl": "https://m.media-amazon.com/images/G/01/RC/KindleAchievements2025FallChallenge_HeadStart_09b4f501-d681-35c1-a3b9-5daf29329383.png",
+        "quantity": 1,
+        "title": "Head Start",
+        "isUnrevealedMysteryAchievement": false,
+        "hasLevel": true
+      },
+      {
+        "imageUrl": "https://m.media-amazon.com/images/G/01/RC/KindleAchievements2025FallChallenge_GoldReader_d1885062-9926-390f-bc57-5e95018fe6ea.png",
+        "quantity": 0,
+        "title": "Gold Reader",
+        "isUnrevealedMysteryAchievement": false,
+        "hasLevel": false
+      },
+      {
+        "imageUrl": "https://m.media-amazon.com/images/G/01/RC/KindleAchievements2025FallChallenge_SilverReader_21fe19f7-5807-3fb7-a491-c14e7a519764.png",
+        "quantity": 0,
+        "title": "Silver Reader",
+        "isUnrevealedMysteryAchievement": false,
+        "hasLevel": false
+      },
+      {
+        "imageUrl": "https://m.media-amazon.com/images/G/01/RC/KindleAchievements2025FallChallenge_Bookish_f259d25a-2f1c-39de-98e3-53bf2714e52d.png",
+        "quantity": 0,
+        "title": "Bookish",
+        "isUnrevealedMysteryAchievement": false,
+        "hasLevel": false
+      }
+    ]
+  }
+}

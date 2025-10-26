@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary data files
+data/*.html
+data/script_*.js
+data/*_responses.json
+data/extracted_*.json
+
+# Generated files (except the main one committed to repo)
+index2.html
+index3.html
+index_one.html
+
+# Logs
+*.log
