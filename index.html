@@ -783,19 +783,36 @@
             m = m > 9 ? m : "0" + m;
             n = n > 9 ? n : "0" + n;
             
-            var imgSrc = "https://img.owspace.com/Public/uploads/Download/" + y + "/" + m + n + ".jpg";
+            // 备用图片源
+            var imgSources = [
+                "https://img.owspace.com/Public/uploads/Download/" + y + "/" + m + n + ".jpg",
+                "https://img.owspace.com/Public/uploads/Download/" + y + "-" + m + "-" + n + ".jpg"
+            ];
             
-            var img = '<img class="daily-calendar-image" src="' + imgSrc + '" alt="单向历" onclick="loadDailyCalendar()" />';
+            tryLoadImage(0);
             
-            document.getElementById("dailyCalendarContent").innerHTML = img;
-            
-            // 监听图片加载错误
-            var imgElement = document.querySelector('.daily-calendar-image');
-            if (imgElement) {
-                imgElement.onerror = function() {
+            function tryLoadImage(index) {
+                if (index >= imgSources.length) {
+                    // 所有源都失败，显示默认内容
                     document.getElementById("dailyCalendarContent").innerHTML = 
-                        '<div class="daily-calendar-loading">今日单向历暂时无法加载</div>';
+                        '<div class="daily-calendar-loading" style="padding: 3rem 1rem; text-align: center;">' +
+                        '<p style="font-size: 3rem; margin-bottom: 1rem;">📚</p>' +
+                        '<p style="font-size: 1.2rem; margin-bottom: 0.5rem;">' + y + ' 年 ' + parseInt(m) + ' 月 ' + parseInt(n) + ' 日</p>' +
+                        '<p style="font-size: 0.85rem; color: var(--text-tertiary); margin-top: 1rem;">Keep Reading · Keep Growing</p>' +
+                        '</div>';
+                    return;
+                }
+                
+                var img = new Image();
+                img.crossOrigin = "anonymous";
+                img.onload = function() {
+                    document.getElementById("dailyCalendarContent").innerHTML = 
+                        '<img class="daily-calendar-image" src="' + imgSources[index] + '" alt="单向历" />';
                 };
+                img.onerror = function() {
+                    tryLoadImage(index + 1);
+                };
+                img.src = imgSources[index];
             }
         }
         

@@ -4,128 +4,81 @@
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg?logo=python)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-> Visualize your Kindle reading records as a beautiful page and display it on GitHub Pages.
+> Visualize your Kindle reading records, auto-deploy to GitHub Pages
 
-🌐 **Demo**: `https://chempeng.github.io/reading_page`
+🌐 **Demo**: https://chempeng.github.io/reading_page
 
 English | [简体中文](README.md)
 
 ## ✨ Features
 
-- 📊 **Reading Heatmap** - Visualize yearly reading activity (square grid)
-- 📅 **Daily Calendar** - Auto-display daily cultural content
-- 📈 **Reading Statistics** - Total days, this month, current streak, longest streak
-- 🎨 **Kindle Minimalist Style** - Elegant design with book aesthetics
-- ⚡ **Auto Sync** - Daily updates via GitHub Actions
-- 📱 **Responsive Layout** - Perfect for desktop and mobile devices
+- 📊 **Reading Heatmap** - Visualize yearly activity
+- 📅 **Daily Calendar** - Cultural content
+- 📈 **Statistics** - Days, streaks, records
+- 🎨 **Kindle Style** - Minimalist design
+- ⚡ **Auto Sync** - Daily updates
+- 📱 **Responsive** - All devices
 
-## 🚀 Quick Start
+## 🚀 5-Minute Setup
 
-### 1. Fork This Repository
+### 1. Fork This Repo
 
-Click the **Fork** button in the top right corner.
+Click **Fork** button.
 
-### 2. Get Kindle Cookie
+### 2. Get Cookie
 
-1. Visit [Amazon Kindle Reading Insights](https://www.amazon.com/kindle/reading/insights) and log in
-2. Press **F12** to open browser developer tools
-3. Switch to **Network** tab
-4. **Refresh the page** (F5)
-5. Find the `insights` or `data` request in the list
-6. Click the request, then check **Headers** > **Request Headers**
-7. Copy the entire **Cookie** field content
+1. Visit [Kindle Reading Insights](https://www.amazon.com/kindle/reading/insights)
+2. **F12** > **Network** tab
+3. **Refresh** (F5)
+4. Find `insights` request > **Headers** > Copy **Cookie**
 
-> 💡 Format example: `session-id=xxx; ubid-main=xxx; at-main=xxx; ...`
+### 3. Add Secret
 
-### 3. Configure GitHub
+1. **Settings** > **Secrets and variables** > **Actions** > **New repository secret**
+2. **Name**: `KINDLE_COOKIE`
+3. **Value**: Paste cookie
 
-#### Add Secret
+### 4. Configure Pages
 
-1. Go to your forked repository
-2. **Settings** > **Secrets and variables** > **Actions**
-3. Click **New repository secret**
-4. Add:
-   - **Name**: `KINDLE_COOKIE`
-   - **Value**: The cookie content you copied
+**Settings** > **Pages** > **Source**: Select **GitHub Actions**
 
-#### Configure Pages and Permissions
+### 5. Run
 
-1. **Settings** > **Pages** > **Source**: Select **GitHub Actions**
-2. **Settings** > **Actions** > **General** > **Workflow permissions**: Select **Read and write permissions** > **Save**
+**Actions** > **Sync Kindle Data and Deploy** > **Run workflow**
 
-### 4. Trigger First Sync
-
-1. **Actions** > **Sync Kindle Data and Deploy**
-2. Click **Run workflow** > **Run workflow**
-3. Wait for completion (about 1-2 minutes)
-4. Visit: `https://your-username.github.io/reading_page`
-
-## 📁 Project Structure
-
-```
-reading_page/
-├── scripts/
-│   ├── kindle_sync.py      # Sync Kindle data
-│   ├── gen_page.py         # Generate static page
-│   └── config.py           # Configuration
-├── data/
-│   ├── kindle_data.json    # Raw data
-│   └── reading_data.json   # Processed data
-├── .github/workflows/
-│   └── sync_kindle.yml     # Auto-sync workflow
-└── index.html              # Generated page
-```
+Wait 1-2 minutes, visit: `https://your-username.github.io/reading_page`
 
 ## ⚙️ Configuration
 
-### Modify Auto-Sync Schedule
-
-Default: Daily at UTC 00:00 (8:00 AM Beijing Time).
+### Modify Sync Schedule
 
 Edit `.github/workflows/sync_kindle.yml`:
 
 ```yaml
 schedule:
-  - cron: '0 0 * * *'  # UTC 00:00 = 8:00 AM Beijing Time
-  # - cron: '0 12 * * *'  # UTC 12:00 = 8:00 PM Beijing Time
+  - cron: '0 0 * * *'  # Daily at UTC 00:00
 ```
 
 ### Manual Sync
 
-**Actions** > **Sync Kindle Data and Deploy** > **Run workflow**
+**Actions** > **Run workflow**
 
 ## 🔧 Local Development
 
 ```bash
-# Install dependencies
 pip install -r requirements.txt
-
-# Sync data
-export KINDLE_COOKIE="your_cookie_here"
+export KINDLE_COOKIE="your_cookie"
 python scripts/kindle_sync.py
-
-# Generate page
 python scripts/gen_page.py
-
-# Open index.html in browser
 ```
 
 ## ❓ FAQ
 
-**Q: Page shows 404?**  
-A: Confirm GitHub Pages is set to **GitHub Actions** and workflow ran successfully. Wait 1-2 minutes.
+**Cookie expired?** Re-obtain and update Secret
 
-**Q: Data not updating?**  
-A: Cookie may have expired. Re-obtain and update the `KINDLE_COOKIE` secret.
+**404 error?** Confirm Pages set to **GitHub Actions**
 
-**Q: Does it support Amazon.cn?**  
-A: Amazon.cn's Kindle service closed in 2023. Only Amazon.com is supported.
-
-## 🤝 Credits
-
-- [GitHubPoster](https://github.com/yihong0618/GitHubPoster) - Data fetching inspiration
-- [running_page](https://github.com/yihong0618/running_page) - Project architecture reference
-- [Owspace Daily Calendar](https://owspace.com) - Daily cultural content
+**Calendar not loading?** Normal, doesn't affect functionality
 
 ## 📄 License
 
@@ -134,6 +87,5 @@ A: Amazon.cn's Kindle service closed in 2023. Only Amazon.com is supported.
 ---
 
 <p align="center">
-  <i>💡 Keep Reading, Keep Growing</i>
+  💡 Keep Reading, Keep Growing
 </p>
-
