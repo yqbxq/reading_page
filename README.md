@@ -78,7 +78,11 @@ python scripts/gen_page.py
 
 **404 错误？** 确认 Pages 配置为 **GitHub Actions**
 
-**单向历无法加载？** 正常现象，不影响功能
+## 🤝 致谢
+
+- [GitHubPoster](https://github.com/yihong0618/GitHubPoster) - 数据获取灵感
+- [running_page](https://github.com/yihong0618/running_page) - 项目架构参考
+- [单向历](https://owspace.com) - 每日文化内容
 
 ## 📄 许可证
 
