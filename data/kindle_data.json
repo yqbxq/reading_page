@@ -9,42 +9,51 @@
     "2025-10-25",
     "2025-10-26",
     "2025-10-27",
-    "2025-10-28"
+    "2025-10-28",
+    "2025-10-29"
   ],
   "current_daily_streak": {
-    "duration": 6,
+    "duration": 7,
     "readingMarketplace": 1,
-    "utcEndTime": "2025-10-28T07:00:00.000Z",
+    "utcEndTime": "2025-10-29T07:00:00.000Z",
     "start": "2025-10-23T00:00:00.000Z",
-    "end": "2025-10-28T00:00:00.000Z",
-    "ttl": 1761700836
+    "end": "2025-10-29T00:00:00.000Z",
+    "ttl": 1761787204
   },
   "longest_daily_streak": {
-    "duration": 6,
+    "duration": 7,
     "readingMarketplace": 1,
-    "utcEndTime": "2025-10-28T07:00:00.000Z",
+    "utcEndTime": "2025-10-29T07:00:00.000Z",
     "start": "2025-10-23T00:00:00.000Z",
-    "end": "2025-10-28T00:00:00.000Z"
+    "end": "2025-10-29T00:00:00.000Z"
   },
   "current_weekly_streak": {
     "duration": 2,
     "readingMarketplace": 1,
-    "utcEndTime": "2025-10-28T07:00:00.000Z",
+    "utcEndTime": "2025-10-29T07:00:00.000Z",
     "start": "2025-10-21T00:00:00.000Z",
-    "end": "2025-10-28T00:00:00.000Z",
-    "ttl": 1761700836
+    "end": "2025-10-29T00:00:00.000Z",
+    "ttl": 1761787204
   },
   "longest_weekly_streak": {
     "duration": 2,
     "readingMarketplace": 1,
-    "utcEndTime": "2025-10-28T07:00:00.000Z",
+    "utcEndTime": "2025-10-29T07:00:00.000Z",
     "start": "2025-10-21T00:00:00.000Z",
-    "end": "2025-10-28T00:00:00.000Z"
+    "end": "2025-10-29T00:00:00.000Z"
   },
   "current_weekly_streak_state": "record_streak_broken",
   "goal_info": {
     "goals": {},
     "titles_read": [
+      {
+        "asin": "YSZF3F37WRJZ5H7M3UAIWCWMK3XTZOBZ",
+        "read_event_id": "adf67c03-b213-4f9f-a2d6-bf4b8087c891",
+        "date_read": "2025-10-28T22:40:04-07:00",
+        "content_type": "PDOC",
+        "source_origin": "KINDLE",
+        "book_uri": "UNKNOWN"
+      },
       {
         "asin": "89B965055B1648CEA71827F9B02EF1D4",
         "read_event_id": "3b37f66c-fa1b-484e-92b8-ab7a6fd5ee0f",
@@ -67,16 +76,16 @@
   "preferences": null,
   "urcGatingWeblabTreatment": "T1",
   "achievements_data": {
-    "daysLeftInCurrentChallenge": 64,
+    "daysLeftInCurrentChallenge": 63,
     "totalAvailableAchievements": 15,
-    "totalEarnedAchievements": 1,
+    "totalEarnedAchievements": 2,
     "achievementsDisplayAttributes": [
       {
-        "imageUrl": "https://m.media-amazon.com/images/G/01/RC/KindleAchievements2025FallChallenge_HeadStart_09b4f501-d681-35c1-a3b9-5daf29329383.png",
+        "imageUrl": "https://m.media-amazon.com/images/G/01/RC/KindleAchievements2025FallChallenge_Bookish_9917a306-061f-3bb5-9148-e001a4ec3695.png",
         "quantity": 1,
-        "title": "Head Start",
+        "title": "Bookish",
         "isUnrevealedMysteryAchievement": false,
-        "hasLevel": true
+        "hasLevel": false
       },
       {
         "imageUrl": "https://m.media-amazon.com/images/G/01/RC/KindleAchievements2025FallChallenge_GoldReader_d1885062-9926-390f-bc57-5e95018fe6ea.png",
@@ -93,9 +102,9 @@
         "hasLevel": false
       },
       {
-        "imageUrl": "https://m.media-amazon.com/images/G/01/RC/KindleAchievements2025FallChallenge_Bookish_f259d25a-2f1c-39de-98e3-53bf2714e52d.png",
+        "imageUrl": "https://m.media-amazon.com/images/G/01/RC/KindleAchievements2025FallChallenge_Bibliophile_e8c40f32-b610-30b0-8b5f-dcdf49566089.png",
         "quantity": 0,
-        "title": "Bookish",
+        "title": "Bibliophile",
         "isUnrevealedMysteryAchievement": false,
         "hasLevel": false
       }
