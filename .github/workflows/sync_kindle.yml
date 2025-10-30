@@ -3,7 +3,7 @@ name: Sync Kindle Data and Deploy
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *'  # Run daily at midnight UTC
+  - cron: '0 0 * * *'  # 每天 UTC 00:00（北京时间 08:00）
   push:
     branches:
       - main
