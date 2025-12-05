@@ -101,10 +101,16 @@
     "2025-11-21",
     "2025-11-22",
     "2025-11-26",
-    "2025-11-28"
+    "2025-11-28",
+    "2025-12-04"
   ],
   "current_daily_streak": {
-    "duration": 0
+    "duration": 1,
+    "readingMarketplace": 1,
+    "utcEndTime": "2025-12-04T08:00:00.000Z",
+    "start": "2025-12-04T00:00:00.000Z",
+    "end": "2025-12-04T00:00:00.000Z",
+    "ttl": 1764896624
   },
   "longest_daily_streak": {
     "duration": 10,
@@ -114,19 +120,19 @@
     "end": "2025-05-15T00:00:00.000Z"
   },
   "current_weekly_streak": {
-    "duration": 14,
+    "duration": 15,
     "readingMarketplace": 1,
-    "utcEndTime": "2025-11-28T08:00:00.000Z",
+    "utcEndTime": "2025-12-04T08:00:00.000Z",
     "start": "2025-08-25T00:00:00.000Z",
-    "end": "2025-11-28T00:00:00.000Z",
-    "ttl": 1764810174
+    "end": "2025-12-04T00:00:00.000Z",
+    "ttl": 1764896624
   },
   "longest_weekly_streak": {
-    "duration": 14,
+    "duration": 15,
     "readingMarketplace": 1,
-    "utcEndTime": "2025-11-28T08:00:00.000Z",
+    "utcEndTime": "2025-12-04T08:00:00.000Z",
     "start": "2025-08-25T00:00:00.000Z",
-    "end": "2025-11-28T00:00:00.000Z"
+    "end": "2025-12-04T00:00:00.000Z"
   },
   "current_weekly_streak_state": "record_streak_broken",
   "goal_info": {
@@ -138,16 +144,16 @@
   "urcGatingWeblabTreatment": "T1",
   "kindleHomeStreaksCardRevampTreatment": "C",
   "achievements_data": {
-    "daysLeftInCurrentChallenge": 28,
+    "daysLeftInCurrentChallenge": 27,
     "totalAvailableAchievements": 15,
     "totalEarnedAchievements": 2,
     "achievementsDisplayAttributes": [
       {
-        "imageUrl": "https://m.media-amazon.com/images/G/01/RC/KindleAchievements2025FallChallenge_BronzeReader_2ad3545a-52d9-3c3c-9fdd-c935e4a94744.png",
-        "quantity": 1,
-        "title": "Bronze Reader",
+        "imageUrl": "https://m.media-amazon.com/images/G/01/RC/KindleAchievements2025FallChallenge_HeadStart_09b4f501-d681-35c1-a3b9-5daf29329383.png",
+        "quantity": 3,
+        "title": "Head Start",
         "isUnrevealedMysteryAchievement": false,
-        "hasLevel": false
+        "hasLevel": true
       },
       {
         "imageUrl": "https://m.media-amazon.com/images/G/01/RC/KindleAchievements2025FallChallenge_GoldReader_d1885062-9926-390f-bc57-5e95018fe6ea.png",
