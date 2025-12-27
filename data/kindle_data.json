@@ -110,15 +110,16 @@
     "2025-12-18",
     "2025-12-19",
     "2025-12-23",
-    "2025-12-24"
+    "2025-12-24",
+    "2025-12-26"
   ],
   "current_daily_streak": {
-    "duration": 2,
+    "duration": 1,
     "readingMarketplace": 1,
-    "utcEndTime": "2025-12-24T08:00:00.000Z",
-    "start": "2025-12-23T00:00:00.000Z",
-    "end": "2025-12-24T00:00:00.000Z",
-    "ttl": 1766711109
+    "utcEndTime": "2025-12-26T08:00:00.000Z",
+    "start": "2025-12-26T00:00:00.000Z",
+    "end": "2025-12-26T00:00:00.000Z",
+    "ttl": 1766797400
   },
   "longest_daily_streak": {
     "duration": 10,
@@ -130,17 +131,17 @@
   "current_weekly_streak": {
     "duration": 18,
     "readingMarketplace": 1,
-    "utcEndTime": "2025-12-24T08:00:00.000Z",
+    "utcEndTime": "2025-12-26T08:00:00.000Z",
     "start": "2025-08-25T00:00:00.000Z",
-    "end": "2025-12-24T00:00:00.000Z",
-    "ttl": 1766711109
+    "end": "2025-12-26T00:00:00.000Z",
+    "ttl": 1766797400
   },
   "longest_weekly_streak": {
     "duration": 18,
     "readingMarketplace": 1,
-    "utcEndTime": "2025-12-24T08:00:00.000Z",
+    "utcEndTime": "2025-12-26T08:00:00.000Z",
     "start": "2025-08-25T00:00:00.000Z",
-    "end": "2025-12-24T00:00:00.000Z"
+    "end": "2025-12-26T00:00:00.000Z"
   },
   "current_weekly_streak_state": "record_streak_broken",
   "goal_info": {
@@ -152,16 +153,16 @@
   "urcGatingWeblabTreatment": "T1",
   "kindleHomeStreaksCardRevampTreatment": "T2",
   "achievements_data": {
-    "daysLeftInCurrentChallenge": 6,
+    "daysLeftInCurrentChallenge": 5,
     "totalAvailableAchievements": 15,
-    "totalEarnedAchievements": 2,
+    "totalEarnedAchievements": 3,
     "achievementsDisplayAttributes": [
       {
-        "imageUrl": "https://m.media-amazon.com/images/G/01/RC/KindleAchievements2025FallChallenge_HeadStart_09b4f501-d681-35c1-a3b9-5daf29329383.png",
-        "quantity": 3,
-        "title": "Head Start",
+        "imageUrl": "https://m.media-amazon.com/images/G/01/RC/KindleAchievements2025FallChallenge_WinterVacation_714804ca-78ac-4173-9d6d-26b998193f2d.png",
+        "quantity": 1,
+        "title": "Winter Vacation",
         "isUnrevealedMysteryAchievement": false,
-        "hasLevel": true
+        "hasLevel": false
       },
       {
         "imageUrl": "https://m.media-amazon.com/images/G/01/RC/KindleAchievements2025FallChallenge_GoldReader_d1885062-9926-390f-bc57-5e95018fe6ea.png",
